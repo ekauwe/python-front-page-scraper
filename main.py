@@ -56,6 +56,7 @@ def scrape(link):
             f=codecs.open(args.output, 'w', 'utf-8') 
             f.write(res)
             f.close()
+            print 'site saved to: %s' % args.output
 
         else:
             print res
@@ -76,9 +77,7 @@ def check():
 #  main
 #############################
 def main():
-    print args.site, args.output
     url = check()
-    print url
     scrape(url)
 
 #############################
